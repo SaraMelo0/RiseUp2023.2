@@ -11,7 +11,7 @@ window.addEventListener('scroll', ()=>{
 })
 
 
-//Scroll suave de cima para baixo
+//Scroll suave de cima para baixo (clicar em "Ver planos")
 
 function scrollTo(element){
     document.querySelector(element).scrollIntoView({behavior:"smooth"});
@@ -23,6 +23,21 @@ document.querySelector(".btn").addEventListener("click", function(event){
     scrollTo(".plans");
 
     console.log(".btn");
+}) 
+// fim do scroll
+
+//Scroll suave de cima para baixo (clicar em "Assinar")
+
+function scrollTo(element){
+    document.querySelector(element).scrollIntoView({behavior:"smooth"});
+}
+
+document.querySelector("#btn").addEventListener("click", function(event){
+    event.preventDefault()
+
+    scrollTo(".plans");
+
+    console.log("#btn");
 }) 
 // fim do scroll
 
