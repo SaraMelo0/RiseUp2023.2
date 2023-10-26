@@ -36,7 +36,6 @@ body::before {
     max-width: 450px;
     height: 635px;
     margin-left: 50%;
- 
     border-radius: 10px;
     box-sizing: border-box;
     transform: translate(-50%);
