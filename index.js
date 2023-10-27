@@ -42,7 +42,7 @@ document.querySelector("#link").addEventListener("click", function(event){
 // fim do scroll
 
 
-// Carrossel
+// Carrossel que suporta rolagem infinita e também permite arrastar as cartas. 
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
