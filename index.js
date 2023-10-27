@@ -37,7 +37,7 @@ document.querySelector("#link").addEventListener("click", function(event){
 
     scrollTo(".plans");
 
-    console.log("link");
+    console.log("#link");
 }) 
 // fim do scroll
 
