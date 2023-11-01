@@ -1,27 +1,27 @@
 // Pagamento 2
 
-function gerarBoleto() {
-    const nomeTitular = document.getElementById("nomeTitular").value;
-    const cpf = document.getElementById("cpf").value;
-    const valorBoleto = parseFloat(document.getElementById("valor").value);
+document.addEventListener("DOMContentLoaded", function () {
+    const realizarPagamentoButton = document.getElementById("realizar-pagamento");
 
-    if (nomeTitular && cpf && !isNaN(valorBoleto)) {
-        // Gere um número de boleto aleatório
-        const numeroBoleto = Math.floor(Math.random() * 1000000000000); // Número de 12 dígitos como exemplo
+    realizarPagamentoButton.addEventListener("click", function () {
+        const planoSelecionado = document.getElementById("plano").value;
+        const nome = document.getElementById("nome").value;
+        const chavePix = document.getElementById("chave-pix").value;
 
-        const boleto = `Nome do Titular: ${nomeTitular}<br>CPF: ${cpf}<br>Valor do Boleto: R$${valorBoleto.toFixed(2)}<br>Número do Boleto: ${numeroBoleto}`;
+        if (planoSelecionado && nome && chavePix) {
 
-        resultadoElement.innerHTML = boleto;
-        boletoInfo.style.display = "block";
-
-        // Exibe um alerta de sucesso e redirecionamento
-        if (confirm("Boleto gerado com sucesso! Clique em OK para ir para outra página.")) {
-            // Redireciona o usuário para outra página
-            window.location.href = "cadastro.html"; // Substitua com a URL da outra página
+            // Simulação de pagamento:
+            const valor = document.querySelector(`option[value="${planoSelecionado}"]`).getAttribute("data-valor");
+            const mensagem = `Você está prestes a efetuar um pagamento de R$ ${valor} para o plano "${planoSelecionado}" em nome de ${nome} usando a chave PIX ${chavePix}. Clique em "OK" para continuar.`;
+            
+            if (confirm(mensagem)) {
+                // Redirecionar para a página de cadastro
+                window.location.href = "cadastro.html";
+            }
+        } else {
+            alert("Por favor, preencha todos os campos para realizar o pagamento.");
         }
-    } else {
-        alert("Preencha todos os campos corretamente para gerar o boleto.");
-    }
-}
+    });
+});
 
 
