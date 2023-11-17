@@ -65,13 +65,13 @@ const dragStop = () => {
 }
 
 const infiniteScroll = () => {
-    // If the carousel is at the beginning, scroll to the end
+    //Se o carrossel estiver no início, role até o final
     if(carousel.scrollLeft === 0) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
         carousel.classList.remove("no-transition");
     }
-    // If the carousel is at the end, scroll to the beginning
+    //Se o carrossel estiver no final, rola até o início
     else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.offsetWidth;
