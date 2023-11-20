@@ -265,6 +265,17 @@ body {
 }
   
 @media screen and (max-width: 600px) {
+    .card {
+        margin-top: 10px;
+    }
+
+    .row_category {
+        margin-left: 7em;
+    }
+
+    .row {
+        margin-top: 30px;
+    }
     .wrapper .carousel {
       grid-auto-columns: 100%;
     }
