@@ -248,7 +248,7 @@ body {
 }
   
 @media screen and (max-width: 600px) {
-    card {
+    .card {
         margin-top: 10px;
     }
 
