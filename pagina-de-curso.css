@@ -122,7 +122,7 @@ body {
     padding-bottom: 2rem;
 }
 
-.button #btn {
+.button-module #btn {
     cursor: pointer;
     color: white;
     outline: none;
@@ -135,7 +135,7 @@ body {
     background-color: #e50914;
 }
 
-.button #btn:hover {
+.button-module #btn:hover {
     background-color: #fc1722;
     transition: 0.3s;
 }
