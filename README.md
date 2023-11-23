@@ -6,7 +6,7 @@
 </h1>
 
 <h1>
-<img src="images/Bannersite.PNG">
+<img src="images/bannersite.png">
 </h1>
 
 ## 📕 Sobre:
