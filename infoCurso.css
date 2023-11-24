@@ -43,7 +43,7 @@ body {
 }
 
 .nav {
-    background-color: #650b0b;
+    background-color: #1a1a1a;
     position: fixed;
     top: 0;
     width: 100%;
@@ -79,9 +79,8 @@ body {
 }
 
 .menu li {
-    left: 10%;
     position: relative;
-    padding-right: 3rem;
+    padding-right: .9rem;
 }
 
 .menu-right ul li {
