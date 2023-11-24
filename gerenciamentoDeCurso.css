@@ -27,7 +27,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
     z-index: 1000;
     transition-timing-function: ease-in;
     transition: 0.5s;
