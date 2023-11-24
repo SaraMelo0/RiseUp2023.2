@@ -57,9 +57,8 @@ body {
 }
 
 .menu li {
-    left: 10%;
-    position: relative;
-    padding-right: 3rem;
+   position: relative;
+   padding-right: .9rem;
 }
 
 .menu-right ul li {
