@@ -87,14 +87,6 @@ body {
     width: 80%;
 }
 
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
 .banner {
     background-image: url(images/desenvolvimento/html-e-css02.jpg);
     background-size: cover;
@@ -162,7 +154,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .progress-bar {
     width: 60%;
     height: 10px;
@@ -219,7 +210,7 @@ body {
     color: #fc1722;
 }
 
-.button-module #btn{
+.btn{
     cursor: pointer;
     color: white;
     outline: none;
@@ -232,7 +223,7 @@ body {
     background-color: #e50914;
 }
 
-.button-module #btn:hover {
+.btn:hover {
     background-color: #fc1722;
     transition: 0.3s;
 }
