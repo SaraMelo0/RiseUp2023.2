@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    width: 80px;
+    object-fit: contain;
+}
+
+.nav {
+    background-color: #650b0b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1000;
+    transition-timing-function: ease-in;
+    transition: 0.5s;
+}
+
+.nav_black {
+    background-color: rgb(20, 20, 20);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    font-size: .90rem;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li {
+    left: 10%;
+    position: relative;
+    padding-right: 3rem;
+}
+
+.menu-right ul li {
+    padding-right: 1.5rem;
+}
+
+.menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fc1722;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+
+.menu a:hover::after {
+    width: 80%;
+}
+
+/*Gabriel*/
+
+section{
+    position: absolute;
+    top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+    
+}
+
+
+.gerenciar{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border: solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gerenciar2{
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.salvar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: #fc1722;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.criar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    color: #fc1722;
+    text-decoration: none;
+}
+
+.curso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+    border: solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+.sobre{
+    position: relative;
+    right: 24%;
+    margin-bottom: 10px;
+}
+
+.texto{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+footer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    gap: 294px;
+}
+
+.data{
+    font-weight: bold;
+}
+
+.editar{
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 3px;
+    padding: 5px;
+}
+

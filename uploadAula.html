@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do curso</title>
+    <link rel="stylesheet" href="uploadAula.css">
+</head>
+<body>
+    
+    
+    <div class="nav" id="nav">
+        <!--logo-->
+        <img class="logo"  src="imagem/logo.png" alt="">
+
+         <!--menu-->
+         <div class="menu">
+
+            <!--menu left-->
+            <div class="menu-left">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Meus Estudos</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="gerencimentoDeCurso.html">Gerenciar curso</a></li>
+                </ul>
+            </div> <!--fim do menu left-->
+
+            <!--menu rigth-->
+            <div class="menu-right">
+                <ul>
+                    <li><a href="login.html">Login</a>
+                        <img src="icons/login-alt.png" alt="" width="15px"></li>
+                    <li><a href="" id="link">Assinar</a></li>
+                </ul>
+            </div>
+        </div> <!--fim do menu-->
+    </div>
+
+
+
+    <div class="father">
+        <div class="topico1">
+            <div style="margin-left:2%;margin-top: 2%;">
+                <h3>Upload das aulas</h3>
+                <div style="margin-left: 2%;margin-top: 2%;">
+                    <h4 style="color: black;">Detalhes</h4>
+                    <div style="margin-left: 2%;margin-top: 2%;">
+                        <form action="">
+                            <textarea placeholder="Titulo do vídeo(Obrigatório)" id="" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Descrição" id="descricao" cols="30" rows="10"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topico2">
+            <label id="meuBloco" for="fileInput">
+                <img src="imagem/player.png" style="width: 30%;">
+                <video id="videoBloco" style="display: none;" controls></video>
+            </label>
+            <input style="opacity: 0;" type="file" id="fileInput" accept="video/*" onchange="exibirImagem(this)">
+            <h4>Escolha o video</h4>
+        </div>
+    </div>
+
+    <a href=""><button>Publicar</button></a>
+
+</body>
+<script>
+
+    function exibirImagem(input) {
+        var bloco = document.getElementById('meuBloco');
+        var videoBloco = document.getElementById('videoBloco');
+
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            bloco.innerHTML = ''; // Limpa o conteúdo do bloco
+            videoBloco.src = e.target.result;
+            videoBloco.style.display = 'block';
+            bloco.appendChild(videoBloco);
+        };
+
+        reader.readAsDataURL(file);
+    }
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do curso</title>
+    <link rel="stylesheet" href="infoCurso.css">
+</head>
+<body>
+    
+    
+    <div class="nav" id="nav">
+        <!--logo-->
+        <img class="logo"  src="imagem/logo.png" alt="">
+
+         <!--menu-->
+         <div class="menu">
+
+            <!--menu left-->
+            <div class="menu-left">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Meus Estudos</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="gerencimentoDeCurso.html">Gerenciar curso</a></li>
+                </ul>
+            </div> <!--fim do menu left-->
+
+            <!--menu rigth-->
+            <div class="menu-right">
+                <ul>
+                    <li><a href="login.html">Login</a>
+                        <img src="icons/login-alt.png" alt="" width="15px"></li>
+                    <li><a href="" id="link">Assinar</a></li>
+                </ul>
+            </div>
+        </div> <!--fim do menu-->
+    </div>
+
+
+
+    <div class="father">
+        <div class="topico1">
+            <div style="margin-left:2%;margin-top: 2%;">
+                <h3>Criar curso</h3>
+                <div style="margin-left: 2%;margin-top: 2%;">
+                    <h4 style="color: black;">Detalhes</h4>
+                    <div style="margin-left: 2%;margin-top: 2%;">
+                        <form action="">
+                            <textarea placeholder="Titulo do curso(Obrigatório)" id="" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Descrição" id="" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Material de apoio" id="" cols="30" rows="10"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topico2">
+            <label id="meuBloco" for="fileInput">
+                <img id="imagemBloco" style="display: none;">
+            </label>
+            <input style="opacity: 0;" type="file" id="fileInput" accept="image/*" onchange="exibirImagem(this)">
+            <h4>Capa do curso</h4>
+        </div>
+    </div>
+
+    <a href="uploadAula.html"><button>Próximo</button></a>
+
+</body>
+<script>
+
+    function exibirImagem(input) {
+        var bloco = document.getElementById('meuBloco');
+        var imagemBloco = document.getElementById('imagemBloco');
+
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            bloco.innerHTML = ''; // Limpa o conteúdo do bloco
+            imagemBloco.src = e.target.result;
+            imagemBloco.style.display = 'block';
+            bloco.appendChild(imagemBloco);
+        };
+
+        reader.readAsDataURL(file);
+    }
+</script>
+</html>
